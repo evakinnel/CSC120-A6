@@ -1,9 +1,19 @@
+/*
+ * Eva Kinnel
+ * Building class
+ * Assignment 6: Use What Your Parent (Class) Gave You
+ * @author R. Jordan Crouser + CSC120 (Fall '22))
+ */
 public class Building {
 
     private String name = "<Name Unknown>";
     private String address = "<Address Unknown>";
     private int nFloors = 1;
 
+    /* constructor for Building class
+     * 
+     * @param String name - building name, String address - building address, int nFloors - number of floors
+     */
     public Building(String name, String address, int nFloors) {
         if (name != null) { this.name = name; }
         if (address != null) { this.address = address; } 
@@ -13,18 +23,34 @@ public class Building {
         this.nFloors = nFloors;
     }
 
+    /* accessor for building name
+     * 
+     * @return String - the name of the building
+     */
     public String getName() {
         return this.name;
     }
 
+    /* accessor for building address
+     * 
+     * @return String - the address of the building
+     */
     public String getAddress() {
         return this.address;
     }
 
+    /* accessor for building number of floors
+     * 
+     * @return int - the number of floors a building has
+     */
     public int getFloors() {
         return this.nFloors;
     }
 
+    /* method to return a cocatonated string of the attributes
+     * 
+     * @return String - a statement describing a building
+     */
     public String toString() {
         return this.name + " is a " + this.nFloors + "-story building located at " + this.address;
     }
